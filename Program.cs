@@ -14,8 +14,8 @@ var services = new ServiceCollection();
 services.AddElsa();
 var serviceProvider = services.BuildServiceProvider();
 
-var values = new Variable<string[]>("values", ["one", "two", "three"]).WithWorkflowStorage();
-var value = new Variable<string>("value", "hello").WithWorkflowStorage();
+var values = new Variable<string[]>("values", ["one", "two", "three"]);
+var value = new Variable<string>("value", "hello");
 
 var fail = new Fail();
 var write = new WriteLine(value);
